@@ -1,9 +1,9 @@
 var files = [
     "/utilities/utilities.coffee",
 
-    "/main.coffee",
+    "/loaders/assets_loader.coffee",
 
-    "/loaders/basic.coffee"
+    "/main.coffee"
 ]
 
 var src_dir = "src";
@@ -25,9 +25,9 @@ module.exports = function (grunt) {
         coffee: {
             compileDebug: {
                 expand: true,
-                flatten: true,
+                flatten: false,
                 cwd: 'src',
-                src: ['*.coffee'],
+                src: ['**/*.coffee'],
                 dest: 'debug/',
                 ext: '.js'
             },
@@ -44,8 +44,8 @@ module.exports = function (grunt) {
             main: {
                 files: [{
                     expand: false,
-                    src: ['node_modules/pixi.js/bin/pixi.min.js'],
-                    dest: 'game/lib/pixi.min.js',
+                    src: ['node_modules/phaser/dist/phaser.min.js'],
+                    dest: 'game/lib/phaser.min.js',
                     filter: 'isFile'
                 }],
             },

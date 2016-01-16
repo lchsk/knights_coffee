@@ -4,7 +4,7 @@
     "description": "",
     "author": "",
     "dependencies": {
-        "pixi.js": "3.0.7"
+        "phaser": "2.4.4"
     },
     "devDependencies": {
         "grunt": "0.4.5",
