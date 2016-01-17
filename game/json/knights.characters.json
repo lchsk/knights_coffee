@@ -3,16 +3,6 @@
         "group": "knights",
         "subgroup": "characters"
     },
-    "files": [
-        {
-            "path": "knights/characters/knights_archer_walk.png",
-            "name": "knights_archer_walk",
-            "width": 576,
-            "height": 256,
-            "tile_width": 64,
-            "tile_height": 64
-        }
-    ],
     "data": [
         {
             "name": "Archer",

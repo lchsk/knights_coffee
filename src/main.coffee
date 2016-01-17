@@ -6,6 +6,7 @@ GameLoading =
 LoadingScreen =
     preload: ->
         game.load.json('knights_characters', 'json/knights.characters.json')
+        do_load_assets()
 
     create: ->
         print 'load create'
@@ -16,14 +17,12 @@ MainMenu =
         print 'hello MainMenu'
 
 GameScreen =
-    preload: ->
-        game.load.spritesheet('knights_archer_walk', 'assets/knights/characters/knights_archer_walk.png', 64, 64)
+    # preload: ->
+        # game.load.spritesheet('knights_archer_walk', 'assets/knights/characters/knights_archer_walk.png', 64, 64)
     create: ->
         sprite = game.add.sprite(576, 256, 'knights_archer_walk')
         sprite.animations.add('walk', [1, 2, 3, 4, 5, 6, 7, 8])
         sprite.animations.play('walk', 15, true)
-        # sprite.scale.set(1)
-        # sprite.smoothed = false
         sprite.loadTexture('knights_archer_walk', 0, false)
 
 game = new Phaser.Game(800, 600, Phaser.AUTO, 'knights')
